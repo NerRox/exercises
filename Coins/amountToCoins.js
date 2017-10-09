@@ -1,86 +1,26 @@
-let rates = {Q: 0.25, D: 0.1, N: 0.05, P: 0.01}
-
 function round(x) {
-  return Number(x.toFixed(2))
+    return Number(x.toFixed(2))
 }
 
 function amountToCoins(amount, coins) {
-  let result = {qs: 0, ds: 0, ns: 0, ps: 0}
+    let result = Array(coins.length).fill(0)
+    let rates = [0.25, 0.1, 0.05, 0.01]
 
-  let result = [0, 0, 0, 0]
-  let need = []
-
-  need[0] = Math.floor(amount / rates[0])
-  if (need[0]) {
-    if (coins[0] >= need[0]) {
-      result[0] += need[0]
-      amount -= need[0] * rates[0]
-    } else {
-      result[0] += coins[0]
-      amount -= coins[0] * rates[0]
+    for (let i = 0; i < coins.length; i++) {
+        let need = Math.floor(amount / rates[i])
+        if (need) {
+            if (coins[i] >= need) {
+                result[i] += need
+                amount -= need * rates[i]
+            } else { // если amount меньше номинала монет
+                result[i] += coins[i] // записть кол-ва монет в результат
+                amount -= coins[i] * rates[i] // вычитаем сумму всех предыдущих монет
+            }
+            amount = round(amount)
+            if (!amount) {
+                break
+            }
+        }
     }
-    amount = round(amount)
-    if (!amount) {
-      return [result, amount]
-    }
-  }
-
-
-  let needQs = Math.floor(amount / rates.Q)
-  if (needQs) {
-    if (coins.qs >= needQs) {
-      result.qs += needQs
-      amount -= needQs * rates.Q
-    } else {
-      result.qs += coins.qs
-      amount -= coins.qs * rates.Q
-    }
-    amount = round(amount)
-    if (!amount) {
-      return [result, amount]
-    }
-  }
-
-  let needDs = Math.floor(amount / rates.D)
-  if (needDs) {
-    if (coins.ds >= needDs) {
-      result.ds += needDs
-      amount -= needDs * rates.D
-    } else {
-      result.ds += coins.ds
-      amount -= coins.ds * rates.D
-    }
-    amount = round(amount)
-    if (!amount) {
-      return [result, amount]
-    }
-  }
-
-  let needNs = Math.floor(amount / rates.N)
-  if (needNs) {
-    if (coins.ns >= needNs) {
-      result.ns += needNs
-      amount -= needNs * rates.N
-    } else {
-      result.ns += coins.ns
-      amount -= coins.ns * rates.N
-    }
-    amount = round(amount)
-    if (!amount) {
-      return [result, amount]
-    }
-  }
-
-  let needPs = Math.floor(amount / rates.P)
-  if (needPs) {
-    if (coins.ps >= needPs) {
-      result.ps += needPs
-      amount -= needPs * rates.P
-    } else {
-      result.ps += coins.ps
-      amount -= coins.ps * rates.P
-    }
-    amount = round(amount)
-  }
-  return [result, amount]
+    return [result, amount]
 }
