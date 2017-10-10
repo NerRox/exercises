@@ -1,2 +1,2 @@
 # Exercises
-Course exercises (CodingBat, Exercism, etc)
+Course exercises (CodingBat, Exercism, Codewars, etc)
