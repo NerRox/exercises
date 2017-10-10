@@ -16,6 +16,8 @@ function squareDigits(num){
 
 	let o = u.join('')
 	return +o
+
+	// return Number(('' + num).split('').map(function (val) { return val * val;}).join(''));
 }
 
 squareDigits(8118) // 641164

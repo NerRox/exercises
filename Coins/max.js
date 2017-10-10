@@ -4,6 +4,7 @@ function maxArrayItem(arr) {
   }
 
   else {
+
   let result = arr.reduce(function(max, current) {
   max = arr[0]
   if (max > current) {
