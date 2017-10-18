@@ -7,15 +7,17 @@ hasOneChar('bbabb'); //false
 
 function hasOneChar(str) {
 	let s = str.split('')
-		for (let i = 0; i < s.length; i++) {
-			if (s[0] == s[i]) {
-				return true
-			}
-			else {
-				return false
-			}
-		}
+	let obj = {}
+
+	for (let i = 0; i < s.length; i++) {
+		let q = s[i]
+		obj[q] = true
 	}
+
+	let karr = Object.keys(obj)
+
+	return karr.length < 2
+}
 
 
 
