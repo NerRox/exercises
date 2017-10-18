@@ -3,8 +3,6 @@ hasOneChar('aaaab'); //false
 hasOneChar('bbbbb'); //true
 hasOneChar('bbabb'); //false
 
-//TODO: figure out how to compare all elements of collection
-
 function hasOneChar(str) {
 	let s = str.split('')
 	let obj = {}
