@@ -60,6 +60,5 @@ function rgb(r, g, b){
 		}
 	}
 
-	let res = arr3.join('').toUpperCase()
-	return res
+	return arr3.join('').toUpperCase()
 }
