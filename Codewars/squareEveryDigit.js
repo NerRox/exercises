@@ -19,4 +19,8 @@ function squareDigits(num){
 	
 }
 
+function square(num) {
+	return +(String(num).split('').map(number => number ** 2).join(''))
+}
+
 squareDigits(8118) // 641164
