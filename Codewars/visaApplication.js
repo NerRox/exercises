@@ -38,7 +38,7 @@ function visaApplication(array) {
 			break;
 	}
 
-  //TODO: FIX THIS DATE SHIT
+  //TODO: FIX THIS DATE SH*T
 
 	let vexp = new Date(visaExpiration)
 

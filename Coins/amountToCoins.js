@@ -12,9 +12,9 @@ function amountToCoins(amount, coins) {
             if (coins[i] >= need) {
                 result[i] += need
                 amount -= need * rates[i]
-            } else { // если amount меньше номинала монет
-                result[i] += coins[i] // записть кол-ва монет в результат
-                amount -= coins[i] * rates[i] // вычитаем сумму всех предыдущих монет
+            } else {
+                result[i] += coins[i]
+                amount -= coins[i] * rates[i] 
             }
             amount = round(amount)
             if (!amount) {

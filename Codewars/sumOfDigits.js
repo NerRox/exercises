@@ -7,14 +7,14 @@ To give you a little more excitement, the program will not only write the result
 
 
 function sum(digits) {
-	let s = digits.split('')
-	let s2 = s.map(string => +string)
+	let arr = digits.split('')
+	let numArr = s.map(string => +string)
 
-	let summary = s2.reduce(function (sum, current){
+	let summary = numArr.reduce(function (sum, current){
 		return sum + current
 	})
 
-	let ss = s.join(' + ')
+	let res = summary.join(' + ')
 	return ss + ' = ' +  summary
 }
 

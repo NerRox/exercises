@@ -1,11 +1,6 @@
 console.log(coinsToAmount({qs: 4})) // 1
 console.log(coinsToAmount({ds: 2})) // 0.2
-/*Первое - ключ, второе - значение
-Coins :: {qs :: number, ds :: number, ns :: number, ps :: number} тип объекта coins
-qs - 25 центов
-ds - 10 центов
-ns - 5 центов
-ps - 1 цент*/
+
 
 function coinsToAmount(coins) {
   let val = Object.keys(coins)
