@@ -7,6 +7,5 @@ missingChar("kitten", 4)
 function missingChar(str, n) {
   let str2 = str.slice(0, n)
   let str3 = str.substring(n + 1)
-  let s = str2 + str3
-  return s
+  return str2 + str3
 }

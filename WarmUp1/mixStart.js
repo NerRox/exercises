@@ -8,5 +8,5 @@ function mixStart(str) {
   let str2 = "ix"
   let str3 = str.slice(1,3)
 
-  return str2 == str3
+  return str2 === str3
 }

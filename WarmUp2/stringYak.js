@@ -6,7 +6,6 @@ stringYak("yak123ya") // "123ya"
 
 function stringYak(str) {
   let reg = /y\wk/g
-  let s = str.replace(reg, "")
-  return s
+	return str.replace(reg, "")
 }
 

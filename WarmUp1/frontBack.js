@@ -1,8 +1,8 @@
 /*Given a string, return a new string where the first and last chars have been exchanged.*/
 
-frontBack("code") → "eodc"
-frontBack("a") → "a"
-frontBack("ab") → "ba"
+frontBack("code") // "eodc"
+frontBack("a") // "a"
+frontBack("ab") // "ba"
 
 function frontBack(str) {
   let first = str.slice(0,1)
