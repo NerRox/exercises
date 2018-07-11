@@ -22,5 +22,6 @@ function amountToCoins(amount, coins) {
             }
         }
     }
+
     return [result, amount]
 }
