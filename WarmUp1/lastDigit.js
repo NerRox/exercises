@@ -5,5 +5,5 @@ console.log(lastDigit(6, 17)) // false
 console.log(lastDigit(3, 113)) // true
 
 function lastDigit(a, b) {
-  return (a % 10 == b % 10)
+  return (a % 10 === b % 10)
 }

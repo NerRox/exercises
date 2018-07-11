@@ -8,7 +8,7 @@ function everyNth(str, n) {
   let result = "";
   
   for (i=0; i<str.length; i = i + n) {
-    result = result + str.charAt(i);
+    result += str.charAt(i);
   }
   
   return result;
