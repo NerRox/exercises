@@ -3,8 +3,7 @@ function fact(n) {
     return 1
   }
 
-  let acc
-  acc = n
+  let acc = n
 
   while (n > 1) {
     acc = acc * (n - 1)
