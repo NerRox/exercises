@@ -42,9 +42,7 @@ function phone(str) {
 		for (var key in phonebook) {
 			res.push(key + ': ' + phonebook[key]);
 		}
-		// ["Ivan: 555-10-01,555-10-03,555-10-02"]
+
 		return res.sort();
 	}
 }
-
-//TODO: Переписать весь этот говнокод во что-то нормальное
